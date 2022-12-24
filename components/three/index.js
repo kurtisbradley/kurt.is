@@ -12,7 +12,7 @@ const Three = () => {
       className={styles.canvas}
       shadows
       dpr={[1, 1.5]}
-      camera={{ fov: 50, position: [-1, 0, 5] }}
+      camera={{ fov: 50, position: [-1.5, 1, 5] }}
     >
       <Suspense fallback={null}>
         <Stage controls={ref} preset="rembrandt" intensity={1} environment="studio" shadows="contact" adjustCamera={2}>
