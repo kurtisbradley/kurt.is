@@ -32,7 +32,7 @@ const Head = ({
       <link rel="icon" href="./favicon-128.png" sizes="128x128" />
       <link rel="icon" href="./favicon-192.png" sizes="192x192" />
       <link rel="apple-touch-icon" href="./favicon-180.png" sizes="180x180" />
-      <link rel="manifest" href="./manifest.webmanifest"></link>
+      <link rel="manifest" href="./manifest.webmanifest" />
       
       {/* Search */}
       <meta name="robots" content="noindex, nofollow" />
