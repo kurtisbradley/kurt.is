@@ -26,7 +26,6 @@ const Head = ({
       {/* General */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
       <meta name="theme-color" content="#0f0f0f" />
-      {/* <meta name="robots" content="noindex, nofollow" /> */}
 
       {/* Favicons */}
       <link rel="icon" href="./favicon-32.png" sizes="32x32" />
@@ -34,6 +33,10 @@ const Head = ({
       <link rel="icon" href="./favicon-192.png" sizes="192x192" />
       <link rel="apple-touch-icon" href="./favicon-180.png" sizes="180x180" />
       <link rel="manifest" href="./manifest.webmanifest"></link>
+      
+      {/* Search */}
+      <meta name="robots" content="noindex, nofollow" />
+      <link rel="canonical" href="https://kurt.is/" />
 
       {children}
     </NextHead>
