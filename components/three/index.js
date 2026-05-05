@@ -21,24 +21,18 @@ const Three = () => {
       shadows="percentage"
       dpr={[1, 1.25]}
       frameloop="demand"
-      camera={{ fov: 50, position: [-1.5, 1, 5] }}
+      camera={{ fov: 50, position: [1.5, 1, 5] }}
     >
       <Suspense fallback={<AssetLoader />}>
         <Stage controls={ref} preset="rembrandt" intensity={1} environment={null} shadows="contact" adjustCamera={2}>
           <Model />
         </Stage>
         <Environment resolution={512} frames={1}>
-          {/* Bright overhead strip — creates sharp top highlight */}
           <Lightformer form="rect" intensity={15} color="#ffffff" scale={[20, 4]} position={[0, 10, 0]} target={[0, 0, 0]} />
-          {/* Key — left side, warm, main specular source */}
           <Lightformer form="rect" intensity={18} color="#fff8f2" scale={[6, 16]} position={[-8, 2, 2]} target={[0, 0, 0]} />
-          {/* Rim — bright back-top, creates sharp silver edge */}
           <Lightformer form="rect" intensity={20} color="#ffffff" scale={[12, 4]} position={[0, 5, -8]} target={[0, 0, 0]} />
-          {/* Fill — right side, dimmer but not black */}
           <Lightformer form="rect" intensity={6} color="#eef4ff" scale={[6, 12]} position={[8, 0, 2]} target={[0, 0, 0]} />
-          {/* Ambient wrap — large soft panel to lift the darks */}
           <Lightformer form="rect" intensity={0.8} color="#ffffff" scale={[20, 20]} position={[0, 0, 10]} target={[0, 0, 0]} />
-          {/* Bottom strip — subtle under-bounce */}
           <Lightformer form="rect" intensity={4} color="#ffffff" scale={[16, 2]} position={[0, -8, 0]} target={[0, 0, 0]} />
         </Environment>
       </Suspense>
